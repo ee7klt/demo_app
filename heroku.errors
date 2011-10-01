@@ -1,0 +1,73 @@
+2011-10-01T09:54:08+00:00 heroku[api]: Add-on add logging:basic by kltah1@gmail.com
+2011-10-01T09:54:08+00:00 heroku[api]: Release v2 created by kltah1@gmail.com
+2011-10-01T09:54:08+00:00 heroku[api]: Add-on update shared-database
+2011-10-01T09:54:08+00:00 heroku[api]: Release v3 created by kltah1@gmail.com
+2011-10-01T09:54:38+00:00 heroku[slugc]: Slug compilation started
+2011-10-01T09:55:44+00:00 heroku[api]: Deploy 81ab4a8 by kltah1@gmail.com
+2011-10-01T09:55:45+00:00 heroku[api]: Release v4 created by kltah1@gmail.com
+2011-10-01T09:55:45+00:00 heroku[web.1]: State changed from created to starting
+2011-10-01T09:55:45+00:00 heroku[slugc]: Slug compilation finished
+2011-10-01T09:55:48+00:00 heroku[web.1]: Starting process with command `thin -p 10227 -e production -R /home/heroku_rack/heroku.ru start`
+2011-10-01T09:55:54+00:00 heroku[web.1]: State changed from starting to up
+2011-10-01T09:56:45+00:00 heroku[rake.1]: State changed from created to starting
+2011-10-01T09:56:48+00:00 app[rake.1]: Awaiting client
+2011-10-01T09:56:48+00:00 app[rake.1]: Starting process with command `bundle exec rake db:migrate`
+2011-10-01T09:56:48+00:00 heroku[rake.1]: State changed from starting to up
+2011-10-01T09:56:52+00:00 heroku[rake.1]: Process exited
+2011-10-01T09:56:56+00:00 heroku[rake.1]: State changed from up to complete
+2011-10-01T09:57:24+00:00 app[web.1]: cache: [GET /] miss
+2011-10-01T09:57:24+00:00 heroku[router]: GET afternoon-spring-6699.heroku.com/ dyno=web.1 queue=0 wait=0ms service=19ms status=200 bytes=5907
+2011-10-01T09:57:24+00:00 heroku[nginx]: 175.136.161.248 - - [01/Oct/2011:02:57:24 -0700] "GET / HTTP/1.1" 200 1865 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" afternoon-spring-6699.heroku.com
+2011-10-01T09:57:24+00:00 app[web.1]: 
+2011-10-01T09:57:24+00:00 app[web.1]: 
+2011-10-01T09:57:24+00:00 app[web.1]: Started GET "/assets/rails.png" for 175.136.161.248 at 2011-10-01 02:57:24 -0700
+2011-10-01T09:57:24+00:00 app[web.1]: cache: [GET /assets/rails.png] miss, store
+2011-10-01T09:57:24+00:00 heroku[router]: GET afternoon-spring-6699.heroku.com/assets/rails.png dyno=web.1 queue=0 wait=0ms service=19ms status=200 bytes=6646
+2011-10-01T09:57:24+00:00 heroku[nginx]: 175.136.161.248 - - [01/Oct/2011:02:57:24 -0700] "GET /assets/rails.png HTTP/1.1" 200 6646 "http://afternoon-spring-6699.heroku.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" afternoon-spring-6699.heroku.com
+2011-10-01T09:57:25+00:00 app[web.1]: cache: [GET /favicon.ico] miss
+2011-10-01T09:57:25+00:00 heroku[router]: GET afternoon-spring-6699.heroku.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=0
+2011-10-01T09:57:25+00:00 heroku[nginx]: 175.136.161.248 - - [01/Oct/2011:02:57:25 -0700] "GET /favicon.ico HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" afternoon-spring-6699.heroku.com
+2011-10-01T09:57:28+00:00 app[web.1]: 
+2011-10-01T09:57:28+00:00 app[web.1]: 
+2011-10-01T09:57:28+00:00 app[web.1]: Started GET "/users" for 175.136.161.248 at 2011-10-01 02:57:28 -0700
+2011-10-01T09:57:28+00:00 app[web.1]:   Processing by UsersController#index as HTML
+2011-10-01T09:57:29+00:00 app[web.1]: Rendered users/index.html.erb within layouts/application (15.7ms)
+2011-10-01T09:57:29+00:00 app[web.1]: Completed 500 Internal Server Error in 140ms
+2011-10-01T09:57:29+00:00 app[web.1]: 
+2011-10-01T09:57:29+00:00 app[web.1]: ActionView::Template::Error (application.css isn't precompiled):
+2011-10-01T09:57:29+00:00 app[web.1]:     2: <html>
+2011-10-01T09:57:29+00:00 app[web.1]:     3: <head>
+2011-10-01T09:57:29+00:00 app[web.1]:     4:   <title>DemoApp</title>
+2011-10-01T09:57:29+00:00 app[web.1]:     5:   <%= stylesheet_link_tag    "application" %>
+2011-10-01T09:57:29+00:00 app[web.1]:     6:   <%= javascript_include_tag "application" %>
+2011-10-01T09:57:29+00:00 app[web.1]:     7:   <%= csrf_meta_tags %>
+2011-10-01T09:57:29+00:00 app[web.1]:     8: </head>
+2011-10-01T09:57:29+00:00 app[web.1]:   app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2919654006350403318_39011860'
+2011-10-01T09:57:29+00:00 app[web.1]:   app/controllers/users_controller.rb:7:in `index'
+2011-10-01T09:57:29+00:00 app[web.1]: 
+2011-10-01T09:57:29+00:00 app[web.1]: 
+2011-10-01T09:57:29+00:00 heroku[router]: GET afternoon-spring-6699.heroku.com/users dyno=web.1 queue=0 wait=0ms service=175ms status=500 bytes=728
+2011-10-01T09:57:29+00:00 app[web.1]: cache: [GET /users] miss
+2011-10-01T09:57:29+00:00 heroku[nginx]: 175.136.161.248 - - [01/Oct/2011:02:57:29 -0700] "GET /users HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" afternoon-spring-6699.heroku.com
+2011-10-01T10:00:43+00:00 app[web.1]: 
+2011-10-01T10:00:43+00:00 app[web.1]: 
+2011-10-01T10:00:43+00:00 app[web.1]: Started GET "/users" for 175.136.161.248 at 2011-10-01 03:00:43 -0700
+2011-10-01T10:00:43+00:00 app[web.1]:   Processing by UsersController#index as HTML
+2011-10-01T10:00:43+00:00 app[web.1]: Rendered users/index.html.erb within layouts/application (0.3ms)
+2011-10-01T10:00:43+00:00 app[web.1]: Completed 500 Internal Server Error in 5ms
+2011-10-01T10:00:43+00:00 app[web.1]: 
+2011-10-01T10:00:43+00:00 app[web.1]: ActionView::Template::Error (application.css isn't precompiled):
+2011-10-01T10:00:43+00:00 app[web.1]:     2: <html>
+2011-10-01T10:00:43+00:00 app[web.1]:     3: <head>
+2011-10-01T10:00:43+00:00 app[web.1]:     4:   <title>DemoApp</title>
+2011-10-01T10:00:43+00:00 app[web.1]:     5:   <%= stylesheet_link_tag    "application" %>
+2011-10-01T10:00:43+00:00 app[web.1]:     6:   <%= javascript_include_tag "application" %>
+2011-10-01T10:00:43+00:00 app[web.1]:     7:   <%= csrf_meta_tags %>
+2011-10-01T10:00:43+00:00 app[web.1]:     8: </head>
+2011-10-01T10:00:43+00:00 app[web.1]:   app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2919654006350403318_39011860'
+2011-10-01T10:00:43+00:00 app[web.1]:   app/controllers/users_controller.rb:7:in `index'
+2011-10-01T10:00:43+00:00 app[web.1]: 
+2011-10-01T10:00:43+00:00 app[web.1]: 
+2011-10-01T10:00:43+00:00 app[web.1]: cache: [GET /users] miss
+2011-10-01T10:00:43+00:00 heroku[router]: GET afternoon-spring-6699.heroku.com/users dyno=web.1 queue=0 wait=0ms service=13ms status=500 bytes=728
+2011-10-01T10:00:43+00:00 heroku[nginx]: 175.136.161.248 - - [01/Oct/2011:03:00:43 -0700] "GET /users HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" afternoon-spring-6699.heroku.com
